@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelStartModel11StoreContainer" CdmEntityContainer="UserFlightEntities">
+    <EntitySetMapping Name="FlightUsers">
+      <EntityTypeMapping TypeName="TravelStartModel11.FlightUser">
+        <MappingFragment StoreEntitySet="FlightUser">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MobileNO" ColumnName="MobileNO" />
+          <ScalarProperty Name="payID" ColumnName="payID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

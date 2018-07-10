@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TravelStartModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FlightDetail">
+    <Key>
+      <PropertyRef Name="IdFlight" />
+    </Key>
+    <Property Name="IdFlight" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeptCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeptDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeptTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArrCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArrDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ArrTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Airline" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AirportName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Travellers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SeatNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cabin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Stops" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FlightID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="FserviceID" Type="Int32" />
+    <Property Name="AirlinePicName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="FlightDetailEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FlightDetails" EntityType="Self.FlightDetail" />
+  </EntityContainer>
+</Schema>

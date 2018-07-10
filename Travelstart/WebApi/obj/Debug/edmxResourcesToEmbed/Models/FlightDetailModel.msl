@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelStartModel2StoreContainer" CdmEntityContainer="FlightDetailEntities">
+    <EntitySetMapping Name="FlightDetails">
+      <EntityTypeMapping TypeName="TravelStartModel2.FlightDetail">
+        <MappingFragment StoreEntitySet="FlightDetails">
+          <ScalarProperty Name="IdFlight" ColumnName="IdFlight" />
+          <ScalarProperty Name="DeptCity" ColumnName="DeptCity" />
+          <ScalarProperty Name="DeptDate" ColumnName="DeptDate" />
+          <ScalarProperty Name="DeptTime" ColumnName="DeptTime" />
+          <ScalarProperty Name="ArrCity" ColumnName="ArrCity" />
+          <ScalarProperty Name="ArrDate" ColumnName="ArrDate" />
+          <ScalarProperty Name="ArrTime" ColumnName="ArrTime" />
+          <ScalarProperty Name="Airline" ColumnName="Airline" />
+          <ScalarProperty Name="AirportName" ColumnName="AirportName" />
+          <ScalarProperty Name="Travellers" ColumnName="Travellers" />
+          <ScalarProperty Name="SeatNO" ColumnName="SeatNO" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Cabin" ColumnName="Cabin" />
+          <ScalarProperty Name="Stops" ColumnName="Stops" />
+          <ScalarProperty Name="FlightID" ColumnName="FlightID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FserviceID" ColumnName="FserviceID" />
+          <ScalarProperty Name="AirlinePicName" ColumnName="AirlinePicName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

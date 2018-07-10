@@ -1,0 +1,81 @@
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="navbar-header">
+			<h3 class="text-primary">Manage Flight Bookings</h3>	
+		</div>
+		<br>
+	</div>
+</div>
+<br>
+
+<div class="col-md-8 content">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Flight Booking Payment 
+    </div>
+  <div class="panel-body">
+        <form action="">
+          <table class="table table-hover" id="table">
+          <thead>
+              <tr >
+                <th scope="col">First Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Card Type</th>
+                <th scope="col">Card Number</th>
+                <th scope="col">Security Code</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr *ngFor = "let emp of employeeService.paidUser">
+                  <td><h6>{{emp.FirstName}}</h6></td>
+                  <td><h6>{{emp.Surname}}</h6></td>
+                  <td><h6>{{emp.CardType}}</h6></td>
+                  <td><h6>{{emp.CardNumber}}</h6></td>
+                  <td><h6>{{emp.SecurityCode}}</h6></td>
+                  <td><h6>{{emp.Date}}</h6></td>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="ck" (click)="show(emp)">
+                  </div>           
+                </tr>
+              </tbody>
+        </table>
+        </form>
+  </div>
+</div>
+</div>
+
+
+<div class="col-md-4 content">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Flight Booking Details 
+          </div>
+               <div class="panel-body">
+                  <table class="table table-hover" id="table">
+                      <tbody>
+                        <tr *ngFor="let emp of employeeService.bookID" >
+                            <td>
+                                <p>Departure City: {{emp.DeptCity}}</p>
+                                <p>Departure Date: {{emp.DeptDate}}</p>
+                                <p>Departure Time: {{emp.DeptTime}}</p>
+                                <p>Arrival City: {{emp.ArrCity}}</p>
+                                
+                                <p>Arrival Time: {{emp.ArrTime}}</p>
+                                <p>Airline: {{emp.Airline}}</p>
+                                <p>Cabin: {{emp.Cabin}}</p>
+                                <p>Stops: {{emp.Stops}}</p>
+                                <p>Travel Time: {{emp.TravelTime}}</p>
+                                <p>Flight ID: {{emp.FlightID}}</p>
+                                <p>Price: R {{emp.Total}}</p>
+                                <button class="btn btn-info" (click)="submit()">View Ticket</button>
+                            </td>
+                        </tr>
+                  </table>
+              </div>
+    </div>
+</div>

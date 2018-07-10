@@ -1,0 +1,124 @@
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</div>
+	<div style="text-align: center">
+			<h2 class="jumbotron bg-secondary text-white">Add Hotel Details</h2>
+			<ul class="text-center">
+				<li><a href="" a routerLink="/home" >Visit Site</a></li>
+			</ul>
+	</div>
+	<br>
+	
+	<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="container-fluid">
+					<img src="assets\images\hotel.jpg" style="width: 100%">
+				</div>
+			</div>
+	</div>
+	
+	
+	<form #HotelAdmin = "ngForm" (ngSubmit) = "onSubmit(HotelAdmin)">
+			<div class="col-md-6">
+					<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="container-fluid">
+										
+										<label for="pwd">Hotel Name</label>
+										<div>
+											<input type="text" name="hotelName" id="hotelName" #hotelName = "ngModel" [(ngModel)] = "employeeService.addHotel.HotelName" >					  
+										</div>
+										<label for="email">Destination</label>
+										<div>
+												<input type="text" name="destination" id="destination" #destination = "ngModel" [(ngModel)] = "employeeService.addHotel.Destination" >					  
+										</div>
+
+										<label for="pwd">Check In Date</label>
+										<div>
+												<input type="text" name="inDate" id="inDate" #inDate = "ngModel" [(ngModel)] = "employeeService.addHotel.InDate">					  
+										</div>
+
+										<label for="pwd">Check Out Date</label>
+										<div>
+												<input type="text" name="outDate" id="outDate" #outDate = "ngModel" [(ngModel)] = "employeeService.addHotel.OutDate">					  
+										</div>
+
+										<label for="pwd">Room</label>
+										<div>
+												<input type="text" name="room" id="room" #room = "ngModel" [(ngModel)] = "employeeService.addHotel.Rooms">					  
+										</div>
+
+										<label for="pwd">Nights</label>
+										<div>
+												<input type="text" name="nights" id="nights" #nights = "ngModel" [(ngModel)] = "employeeService.addHotel.Nights">					  
+										</div>
+
+										<label for="pwd">Hotel Pic Name</label>
+										<div>
+												<input type="text" name="hotelPic" id="hotelPic" #hotelPic = "ngModel" [(ngModel)] = "employeeService.addHotel.HotelPic">					  
+										</div>
+
+
+
+							
+									</div>
+								</div>
+					</div>
+					</div>
+					
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="container-fluid">
+	
+									<label for="pwd">Hotel Address</label>
+									<div>
+											<input type="text" name="hotelAddress" id="hotelAddress" #hotelAddress = "ngModel" [(ngModel)] = "employeeService.addHotel.HotelAddress">
+											
+									</div>
+
+									<label for="pwd">Landmark</label>
+									<div>
+											<input type="text" name="landmark" id="landmark" #landmark = "ngModel" [(ngModel)] = "employeeService.addHotel.Landmark">
+											
+									</div>
+
+									<label for="pwd">Room Type</label>
+									<div>
+											<input type="text" name="roomType" id="roomType" #roomType = "ngModel" [(ngModel)] = "employeeService.addHotel.RoomType">
+											
+									</div>
+									
+
+									<label for="pwd">What's near</label>
+									<div>
+											<input type="text" name="near" id="near" #near = "ngModel" [(ngModel)] = "employeeService.addHotel.Near">
+											
+									</div>
+
+									<label for="pwd">Price</label>
+									<div>
+											<input type="text" name="star" id="star" #star = "ngModel" [(ngModel)] = "employeeService.addHotel.Star">					  
+									</div>
+
+									<label for="pwd">Included</label>
+									<div>
+											<input type="text" name="included" id="included" #included = "ngModel" [(ngModel)] = "employeeService.addHotel.Included">
+											
+									</div>
+
+								</div>
+								<div class="float-right">
+										<button type="submit" class="btn btn-secondary btn-lg"><span class="glyphicon glyphicon-save"></span>Save</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+	</form>
+	

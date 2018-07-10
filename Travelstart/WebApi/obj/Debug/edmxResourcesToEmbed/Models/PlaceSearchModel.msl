@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApiDBModel1StoreContainer" CdmEntityContainer="PlaceSearchEntities10">
+    <EntitySetMapping Name="SearchPlaces">
+      <EntityTypeMapping TypeName="WebApiDBModel1.SearchPlace">
+        <MappingFragment StoreEntitySet="SearchPlaces">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="deptCity" ColumnName="deptCity" />
+          <ScalarProperty Name="arrCity" ColumnName="arrCity" />
+          <ScalarProperty Name="cDeptCity" ColumnName="cDeptCity" />
+          <ScalarProperty Name="cArrCity" ColumnName="cArrCity" />
+          <ScalarProperty Name="hDeptCity" ColumnName="hDeptCity" />
+          <ScalarProperty Name="hArrCity" ColumnName="hArrCity" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

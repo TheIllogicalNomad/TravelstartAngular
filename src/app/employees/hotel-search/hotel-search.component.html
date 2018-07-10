@@ -1,0 +1,36 @@
+<form >
+    <table class="table table-hover" id="table">
+        <tbody>
+          <tr *ngFor="let emp of employeeService.showHotelSearched " >
+              <td>
+            <div class="row">
+                
+                <div class="col-md-7 ">
+                    <div class="panel panel-default" style="background-color: rgb(227, 229, 241);">
+                       <div class="panel-body">
+                          <div class="col-md-6">
+                              <h4>{{emp.HotelName}}</h4>
+                              <p>{{emp.HotelAddress}}</p>
+                              <img src="assets\images\hotels\{{emp.HotelPic}}" style="width: 200px">
+                           </div>   
+                      </div>
+                    </div>
+                </div>
+
+                <div class="">
+                  <div class="col-md-6">
+                    <p class="text-success">{{emp.Near}}</p>
+                    <h2 class="text-danger">ZAR {{emp.Star}}</h2>
+                    <p><u>nightly price per room</u></p>
+                    <br>
+                    <button  class="btn btn-lg btn-block btn-info" id="ck" (click)="show(emp)" >Select</button>
+                  </div>
+                </div>    
+          </div>
+            </td>
+           
+          </tr>
+        </tbody>
+</table>
+</form>
+

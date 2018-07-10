@@ -1,0 +1,70 @@
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<br>
+		<br>
+		<br>
+    <br>
+    <br>
+		<div class="navbar-header">
+            <h3 class="text-primary" >Happy with what you see?</h3>	
+		</div>
+		<br>
+    </div>
+    
+</div>
+<br>
+
+<table class="table table-hover" id="table">
+    <tbody>
+      <tr *ngFor="let s of list">
+          <td>
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="panel panel-default" style="background-color: rgb(227, 229, 241);">
+                         <div class="panel-body">
+                           <div class="col-md-7">
+                            
+                                <h2>{{airL}}</h2>
+                                <img src="assets\images\{{pic}}" class="img-rounded" style="max-width:200px">
+
+                                <div  id="content" #content>
+                                        <h4><strong> Airport</strong></h4>
+                                        <p>{{airport}}</p>
+                                        <p><strong>PASSENGER NAME</strong></p>
+                                        <p>{{s.name}} {{s.surname}}</p>
+                                        <br>
+                                        <p><strong>FROM:</strong></p>
+                                        <p>{{dept}}</p>
+                                        <p><strong>TO:</strong></p>
+                                        <p>{{arr}}</p>
+                                </div>
+                           </div>
+                            <div style="text-align: right" class="col-md-5">
+                               
+                              <div class="panel-heading" style="background-color: #0e99f7;">
+                                  <h5>{{cabin}} CABIN</h5>
+                              </div>
+                              <p>FLIGHT</p>
+                              <p class="text-primary"><strong>{{flightID}}</strong></p>
+                              <p>DATE</p>
+                              <p class="text-primary"><strong>{{dDate}}</strong></p>
+                              <p>Departure Time TIME</p>
+                              <p class="text-primary"><strong>{{dTime}}</strong></p>
+                              <P>SEAT NO:</P>
+                              <p class="text-primary"><strong></strong>{{s.seatNumber}}</p>
+                              <p class="text-danger">GATE CLOSES 40 MINUTES BOFORE DEPARTURE</p>
+                              <h2 class="text-primary"> HAVE A NICE TRIP</h2>
+                              <img src="assets\images\code.png" class="img-rounded" style="max-width:200px">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+          </td>
+      </tr>
+    </tbody>
+</table>
+<div>
+    <button type="submit" routerLink="/confirm-book" class="btn btn-primary" style="float: right"><span class="glyphicon glyphicon-saved" aria-hidden="true"></span>Finalise</button>
+</div>

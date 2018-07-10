@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TravelStartModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CarDetails">
+          <Key>
+            <PropertyRef Name="carID" />
+          </Key>
+          <Property Name="carID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pickL" Type="varchar" MaxLength="50" />
+          <Property Name="pickD" Type="varchar" MaxLength="50" />
+          <Property Name="pickT" Type="varchar" MaxLength="50" />
+          <Property Name="dropL" Type="varchar" MaxLength="50" />
+          <Property Name="dropD" Type="varchar" MaxLength="50" />
+          <Property Name="dropT" Type="varchar" MaxLength="50" />
+          <Property Name="airportName" Type="varchar" MaxLength="50" />
+          <Property Name="carName" Type="varchar" MaxLength="50" />
+          <Property Name="picName" Type="varchar" MaxLength="50" />
+          <Property Name="passengers" Type="varchar" MaxLength="50" />
+          <Property Name="luggage" Type="varchar" MaxLength="50" />
+          <Property Name="doors" Type="varchar" MaxLength="50" />
+          <Property Name="category" Type="varchar" MaxLength="50" />
+          <Property Name="spec" Type="varchar(max)" />
+          <Property Name="included" Type="varchar(max)" />
+          <Property Name="price" Type="varchar" MaxLength="50" />
+          <Property Name="supplier" Type="varchar" MaxLength="50" />
+          <Property Name="daysRent" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="TravelStartModel4StoreContainer">
+          <EntitySet Name="CarDetails" EntityType="Self.CarDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TravelStartModel4" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CarDetail">
+          <Key>
+            <PropertyRef Name="carID" />
+          </Key>
+          <Property Name="carID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pickL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pickD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pickT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dropL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dropD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dropT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="airportName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="carName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="picName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="passengers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="luggage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="doors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="spec" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="included" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="supplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="daysRent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="CarDetailsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CarDetails" EntityType="Self.CarDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TravelStartModel4StoreContainer" CdmEntityContainer="CarDetailsEntities">
+          <EntitySetMapping Name="CarDetails">
+            <EntityTypeMapping TypeName="TravelStartModel4.CarDetail">
+              <MappingFragment StoreEntitySet="CarDetails">
+                <ScalarProperty Name="carID" ColumnName="carID" />
+                <ScalarProperty Name="pickL" ColumnName="pickL" />
+                <ScalarProperty Name="pickD" ColumnName="pickD" />
+                <ScalarProperty Name="pickT" ColumnName="pickT" />
+                <ScalarProperty Name="dropL" ColumnName="dropL" />
+                <ScalarProperty Name="dropD" ColumnName="dropD" />
+                <ScalarProperty Name="dropT" ColumnName="dropT" />
+                <ScalarProperty Name="airportName" ColumnName="airportName" />
+                <ScalarProperty Name="carName" ColumnName="carName" />
+                <ScalarProperty Name="picName" ColumnName="picName" />
+                <ScalarProperty Name="passengers" ColumnName="passengers" />
+                <ScalarProperty Name="luggage" ColumnName="luggage" />
+                <ScalarProperty Name="doors" ColumnName="doors" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="spec" ColumnName="spec" />
+                <ScalarProperty Name="included" ColumnName="included" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="supplier" ColumnName="supplier" />
+                <ScalarProperty Name="daysRent" ColumnName="daysRent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,68 @@
+<div class="text-center">
+<h2>Search, Compare & Book Car Hire</h2>
+<br>
+<br>
+<br>
+
+<form autocomplete="off" (ngSubmit) = "search()">
+  <div class="container bg-light">
+    <br>
+  <div class="">
+      <div class="autocomplete" style="width:300px;">
+        Pick-up Location 
+        <select class="form-control form-control-lg" name="pick" id="pickUp">
+            <option value="">Choose... </option>
+            <option *ngFor ="let car of employeeService.showCar">{{car.pickCity}}</option>
+        </select>
+      </div>
+      
+      <!--<input type="submit">-->
+      <div class="autocomplete" style="width:300px;">
+        Drop-off Location 
+        <select class="form-control form-control-lg" name="drop" id="dropOff">
+            <option value="">Choose... </option>
+            <option *ngFor ="let car of employeeService.showCar">{{car.dropCity}}</option>
+        </select>
+      </div>
+  </div>
+
+<div class="">
+      <div class="autocomplete" style="width:300px;">
+        Pick-up Date <input class="form-control" id="dp" name = "d1"  [(ngModel)] = "d1" type="date" style="background-color: #def2f6;">
+        <select class="form-control form-control-lg" name="t1" id="time1">
+            <option *ngFor ="let d1 of date1">{{d1}}</option>
+        </select>
+      </div>
+      <!--<input type="submit">-->
+      <div class="autocomplete" style="width:300px;">
+        Drop-off Date <input class="form-control" id="df" name = "d2"  [(ngModel)] = "d2" type="date" style="background-color: #def2f6;">
+        <select class="form-control form-control-lg" name="t2" id="time2" required>
+            <option *ngFor ="let d1 of date1">{{d1}}</option>
+        </select>
+        <button type="submit" class="btn btn-primary" style="float: right">Continue</button>
+      </div>
+</div>
+    <br>
+</div>
+</form>
+</div>
+<br>
+<div class="container">
+  <div class="text-center">
+        <h2 class="text-primary">Best value car rental</h2>
+        <img src="assets\images\travel.jpeg" class="img-rounded" alt="Cinque Terre" style="width: 250px">
+        <h4 >Need a car in your destination? </h4>
+        <h4>Book with Travelstart and receive preferential rates with over 1600 suppliers around the world</h4>
+        <br>
+        <h3 class="text-secondary">Our most trusted suppliers</h3>
+        <br>
+        <div class="row">
+            <img src="assets\images\carSupplier\Budget.png" class="img-rounded" alt="Cinque Terre" style="width: 250px">
+            <img src="assets\images\carSupplier\Europcar.jpg" class="img-rounded" alt="Cinque Terre" style="width: 250px">
+            <img src="assets\images\carSupplier\First.png" class="img-rounded" alt="Cinque Terre" style="width: 250px">
+            <img src="assets\images\carSupplier\Hertz.png" class="img-rounded" alt="Cinque Terre" style="width: 250px">
+        </div>
+  </div>
+</div>
+
+

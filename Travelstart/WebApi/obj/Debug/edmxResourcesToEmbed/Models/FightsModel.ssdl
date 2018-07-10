@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApiDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="fightsDB">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deptCity" Type="varchar" MaxLength="50" />
+    <Property Name="arrCity" Type="varchar" MaxLength="50" />
+    <Property Name="deptDate" Type="varchar" MaxLength="50" />
+    <Property Name="arrDate" Type="varchar" MaxLength="50" />
+    <Property Name="adults" Type="varchar" MaxLength="50" />
+    <Property Name="children" Type="varchar" MaxLength="50" />
+    <Property Name="infants" Type="varchar" MaxLength="50" />
+    <Property Name="economyCabin" Type="varchar" MaxLength="50" />
+    <Property Name="premiumCabin" Type="varchar" MaxLength="50" />
+    <Property Name="firstCabin" Type="varchar" MaxLength="50" />
+    <Property Name="businessCabin" Type="varchar" MaxLength="50" />
+    <Property Name="userDetails" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="WebApiDBModel1StoreContainer">
+    <EntitySet Name="fightsDB" EntityType="Self.fightsDB" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

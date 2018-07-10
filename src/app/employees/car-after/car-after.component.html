@@ -1,0 +1,136 @@
+<div class="col-md-7 col-sm-4 col-xs-12">
+    <div class="container-fluid" style="background-color: green">
+      <br>
+        <p class="text-white">Free cancellation up to 24 hours before your pick-up</p>
+    </div>
+    <br>
+      <div class="panel panel-default">
+          <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h4>{{picName}}</h4>
+                  <img src="assets\images\cars\{{pic}}" style="width: 200px">
+                  <hr>
+                  <p>Supplier:</p>
+                  <img src="assets\images\carSupplier\{{supp}}" style="width: 100px">
+                </div>
+                <div class="col-md-6">
+                  <h4>Pick-Up</h4>
+                  <p>{{pick}} - Airport - {{airport}}</p>
+                  <p>{{t1}} {{d1}}</p>
+                  <br>  
+                  <h3>Drop-Off</h3>
+                  <p>{{drop}}</p>
+                  <p>{{t2}} {{d2}}</p>
+                </div>
+              </div>
+          </div>
+    </div>
+    <br>
+    <form #CarForm = "ngForm" (ngSubmit) = "onSubmit(CarForm)" >
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: gray"><h4>Lead driver details</h4></div>
+            <div class="panel-body">
+                <div class="container-fluid">
+                  <p>Please enter the lead driver name</p>
+                  <br>
+                  <div class="text-center">
+                    <label for="">Title</label>
+                    <div>
+                        <input type="text"name="title" id="title" #title = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.Title">
+                    </div>
+            
+                    <label for="">First name</label>
+                    <div>
+                        <input type="text" name="firstname" id="firstname" #firstname = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.FirstName">
+                    </div>
+            
+                    <label for="">Surname</label>
+                    <div>
+                        <input type="text" name="surname" id="" #surname = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.Surname">
+                    </div>
+
+                    <label for="EmailAddress">Email Address</label>
+                    <div > 
+                        <input type="text" name="EmailAddress" id="emailAddress" #EmailAddress = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.EmailAddress">
+                    </div>
+
+                    <label for="phoneNO">Mobile NO</label>
+                    <div> 
+                        <input type="text" name="MobileNO" id="MobileNO" #MobileNO = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.MobileNO">
+                    </div>
+
+                    <label for="address">Address</label>
+                    <div > 
+                        <input type="text" name="address" id="address" #Address = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.Address">
+                    </div>
+
+                    <label for="city">City</label>
+                    <div > 
+                        <input type="text" name="city" id="city" #City = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.City">
+                    </div>
+
+                    <label for="code">Post Code</label>
+                    <div > 
+                        <input type="text" name="PostalCode" id="PostalCode" #PostalCode = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.PostalCode">
+                    </div>
+                
+                    <label for="fliNo">Flight NO</label>
+                    <div > 
+                        <input type="text" name="FlightNO" id="FlightNO" placeholder="Flight number,Airline or Departure" #FlightNO = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.FlightNO">
+                    </div>
+
+                    <label for="age">Driver's Age </label> 
+                    <div >
+                        <input type="text" name="age" id="age" #Age = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.Age">
+                    </div>
+                </div>
+
+                  <h4><span class="glyphicon glyphicon-lock"></span>Payment details</h4>
+                  <div class="container-fluid bg-light">
+                        <label for="">First name</label>
+                        <div>
+                            <input type="text" name="" id="">
+                        </div>
+      
+                        <label for="">Surname</label>
+                        <div>
+                          <input type="text" name="" id="">
+                        </div>
+    
+                        <label for="">Card Type</label>
+                        <div>
+                          <input type="text" name="" id="">
+                        </div>
+    
+                        <label for="">Card number</label>
+                        <div>
+                          <input type="text" name="" id="">
+                        </div>
+    
+                        <label for="">Security Code</label>
+                        <div>
+                          <input type="text" name="" id="code">
+                        </div>
+                        <br>
+                </div>           
+                  <button type="submit" class="btn btn-info btn-lg">Book</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="col-md-4 ">
+
+    <div class="panel panel-default">
+        <div class="panel-heading" style="background-color: grey;"><h4>Price Summary</h4></div>
+        <div class="panel-body">
+            <P>Includes Other Fees (R 79.00)</P>
+            <P>Includes Undefined (R 79.00)</P>
+        </div>
+        <div class="panel-footer">
+          <h5>Total: <b> R {{calc}}</b></h5>
+        </div>
+</div>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelStartModel12StoreContainer" CdmEntityContainer="FlightBookEntities1">
+    <EntitySetMapping Name="FlightBookSummaries">
+      <EntityTypeMapping TypeName="TravelStartModel12.FlightBookSummary">
+        <MappingFragment StoreEntitySet="FlightBookSummary">
+          <ScalarProperty Name="bookID" ColumnName="bookID" />
+          <ScalarProperty Name="DeptCity" ColumnName="DeptCity" />
+          <ScalarProperty Name="ArrCity" ColumnName="ArrCity" />
+          <ScalarProperty Name="DeptTime" ColumnName="DeptTime" />
+          <ScalarProperty Name="ArrTime" ColumnName="ArrTime" />
+          <ScalarProperty Name="Airline" ColumnName="Airline" />
+          <ScalarProperty Name="Cabin" ColumnName="Cabin" />
+          <ScalarProperty Name="Stops" ColumnName="Stops" />
+          <ScalarProperty Name="TravelTime" ColumnName="TravelTime" />
+          <ScalarProperty Name="FlightID" ColumnName="FlightID" />
+          <ScalarProperty Name="SeatNO" ColumnName="SeatNO" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="payID" ColumnName="payID" />
+          <ScalarProperty Name="DeptDate" ColumnName="DeptDate" />
+          <ScalarProperty Name="ArrDate" ColumnName="ArrDate" />
+          <ScalarProperty Name="SeatNO2" ColumnName="SeatNO2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

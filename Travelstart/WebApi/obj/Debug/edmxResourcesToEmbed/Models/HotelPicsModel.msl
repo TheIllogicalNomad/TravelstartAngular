@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelStartModel8StoreContainer" CdmEntityContainer="HotelPicEntities">
+    <EntitySetMapping Name="HotelPics">
+      <EntityTypeMapping TypeName="TravelStartModel8.HotelPic">
+        <MappingFragment StoreEntitySet="HotelPics">
+          <ScalarProperty Name="picID" ColumnName="picID" />
+          <ScalarProperty Name="picName" ColumnName="picName" />
+          <ScalarProperty Name="hotelID" ColumnName="hotelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

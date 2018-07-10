@@ -1,0 +1,147 @@
+<h1>Who's travelling?</h1>
+<form #userForm = "ngForm" (ngSubmit) = "onSubmit(userForm)">
+    <div class="col-md-6 col-sm-4 col-xs-12">
+        <div class="container-fluid" style="background-color: #0e99f7;">
+            <a class="navbar-brand"> <img alt="Logo" src="assets\images\user.png" style="max-width:40px;margin-top:-2px" /> </a>
+            <h4>Already have an account? <button ng-click="clicked()" class="btn btn-secondary" style="float: right" routerLink = "/employee-list">Sign in</button></h4>
+            <h5><a ></a> Sign in to book faster.</h5>
+        </div>
+        <br>
+            <div class="panel panel-default" >
+                <div class="panel-heading" style="background-color: #0e99f7;">
+                    Traveller 1
+                </div>
+                <div class="panel-body">
+    
+                    <div class="form-group">
+                        Title <input class="form-control" name="title" id="title" #title = "ngModel" [(ngModel)] = "employeeService.traveller.Title" placeholder="Enter Title" required>
+                        <div class="validation-error" *ngIf="title.invalid && title.touched">This Field is Required.</div>
+                    </div>
+
+                    <div class="form-group">
+                        First Name  <input class="form-control" name="firstName" id="firstName" #firstName = "ngModel" [(ngModel)] = "employeeService.traveller.FirstName" placeholder="Enter first name" required>
+                        <div class="validation-error" *ngIf="firstName.invalid && firstName.touched">This Field is Required.</div>
+                    </div>
+
+                    <div class="form-group">
+                        Middle Name  <input class="form-control" name="middleName" id="middleName" #middleName = "ngModel" [(ngModel)] = "employeeService.traveller.MiddleName" placeholder="Enter first name" required>
+                        <div class="validation-error" *ngIf="middleName.invalid && middleName.touched">This Field is Required.</div>
+                    </div>
+
+                    <div class="form-group">
+                        Surname  <input class="form-control" name = "surName" id="surName"  #surName = "ngModel" [(ngModel)] = "employeeService.traveller.Surname"  placeholder="Enter last name" required>
+                        <div class="validation-error" *ngIf="surName.invalid && surName.touched">This Field is Required.</div>
+                    </div>
+
+                    <div class="form-group">
+                        EmailAddress(Optional)  <input type="email" class="form-control" name = "email" id="email" #email = "ngModel" [(ngModel)] = "employeeService.traveller.Email" placeholder="Enter your email" required>
+                        <div class="validation-error" *ngIf="email.invalid && email.touched">This Field is Required.</div>
+                    </div>   
+
+                    <div class="form-group">
+                        Date of Birth  <input class="form-control" name = "dob" id="dob"  #dob = "ngModel" [(ngModel)] = "employeeService.traveller.DOB"  placeholder="Enter Date of birth. dd-mm-yyyy" required>
+                        <div class="validation-error" *ngIf="dob.invalid && dob.touched">This Field is Required.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        Mobile number  <input class="form-control" name = "mobileNO" id="mobileNO"  #mobileNO = "ngModel" [(ngModel)] = "employeeService.traveller.MobileNO"  placeholder="Enter your mobile number" required>
+                        <div class="validation-error" *ngIf="mobileNO.invalid && mobileNO.touched">This Field is Required.</div>
+                    </div>
+                    
+                </div>
+          </div>
+
+
+
+            <h4><span class="glyphicon glyphicon-lock"></span>Payment details</h4>
+            <div class="container-fluid bg-light">
+                    <label for="">First name</label>
+                    <div>
+                        <input type="text" name="firstname" id="firstname" #firstname = "ngModel" [(ngModel)] = "employeeService.payment.FirstName" >
+                    </div>
+
+                    <label for="">Surname</label>
+                    <div>
+                    <input type="text" name="surname" id="surname" #surname = "ngModel" [(ngModel)] = "employeeService.payment.Surname">
+                    </div>
+
+                    <label for="">Card Type</label>
+                    <div>
+                        <input type="text" name="cardtype" id="cardtype" #cardtype = "ngModel" [(ngModel)] = "employeeService.payment.CardType" placeholder="Visa or Master Card">
+                    </div>
+
+                    <label for="">Security Code</label>
+                    <div>
+                    <input type="text" name="securityCode" id="securityCode" #securityCode = "ngModel" [(ngModel)] = "employeeService.payment.SecurityCode">
+                    </div>
+                    <br>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                        <p>By clicking on "Continue" I agree and accept the Terms and conditions of the Travelstart website and its travel partners.</p>
+                    <button type="submit" ng-click="clicked()" class="btn btn-primary" style="float: right" href="#home">Continue</button>
+                </div>
+            </div>   
+          <br> 
+    </div>
+
+    <div class="col-md-5">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #0e99f7;">
+                <h3>Booking Summary</h3>
+            </div>
+                <div class="panel-body">
+                    <p>{{dept}} - {{arr}}</p> 
+                    <p>{{dDate}} - {{aDate}}</p> 
+                    <br>
+                    <p>Dept. Time: {{dTime}}</p>
+                    <p>Arr. Time: {{aTime}}</p>
+                    <p>Airline: {{airL}}</p>
+                    <p>Cabin: {{cabin}}</p>
+                    <p>Stops: {{stops}}</p>
+                    <p>FlightID: {{flightID}}</p>
+                    <p>Seat NO: {{seatNO}}</p>
+                    <p>Seat NO2: {{seatNO2}}</p>
+                    <p>Travel Time: {{totTime}}</p>
+                </div>
+                <div class="panel-footer">
+                    <h3>Total: R {{totPrice}}</h3>
+                </div> 
+        </div>
+
+        <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: #0e99f7;"><h3>Confirm Booking Details</h3></div>
+                    <div class="panel-body">
+                        <div class="row">
+                                <input type="text" class="form-control" name="deptCity" id="deptCity"  #deptCity = "ngModel" [(ngModel)] = "employeeService.bookFlight.DeptCity" placeholder="Depature City">
+                                <input type="text" class="form-control" name="deptTime" id="deptTime"  #deptTime = "ngModel" [(ngModel)] = "employeeService.bookFlight.DeptTime" placeholder="Depature Time">
+                        </div>
+                        <div class="row">
+                            <input type="text" class="form-control" name="deptDate" id="deptDate"  #deptDate = "ngModel" [(ngModel)] = "employeeService.bookFlight.DeptDate" placeholder="Depature Date">
+                            <input type="text" class="form-control" name="arrDate" id="arrDate"  #arrDate = "ngModel" [(ngModel)] = "employeeService.bookFlight.ArrDate" placeholder="Arrival Date">
+                        </div>
+                        <div class="row">
+                                <input type="text" class="form-control" name="arrCity" id="arrCity"  #arrCity = "ngModel" [(ngModel)] = "employeeService.bookFlight.ArrCity" placeholder="Arrival City">
+                                <input type="text" class="form-control" name="arrTime" id="arrTime"  #arrTime = "ngModel" [(ngModel)] = "employeeService.bookFlight.ArrTime" placeholder="Arrival Time">
+                        </div>
+                        <div class="row">
+                                <input type="text" class="form-control" name="airline" id="airline"  #airline = "ngModel" [(ngModel)] = "employeeService.bookFlight.Airline" placeholder="Airline Name">
+                                <input type="text" class="form-control" name="Cabin" id="Cabin"  #Cabin = "ngModel" [(ngModel)] = "employeeService.bookFlight.Cabin" placeholder="Cabin">
+                        </div>
+                        <div class="row">
+                                <input type="text" class="form-control" name="Stops" id="Stops"  #Stops = "ngModel" [(ngModel)] = "employeeService.bookFlight.Stops" placeholder="Number of stops">
+                                <input type="text" class="form-control" name="travelTime" id="travelTime"  #travelTime = "ngModel" [(ngModel)] = "employeeService.bookFlight.TravelTime" placeholder="Travel Time">
+                        </div>
+                        <div class="row">
+                                <input type="text" class="form-control" name="SeatNO" id="SeatNO"  #SeatNO = "ngModel" [(ngModel)] = "employeeService.bookFlight.SeatNO" placeholder="Seat Number">
+                                <input type="text" class="form-control" name="SeatNO2" id="SeatNO2"  #SeatNO2 = "ngModel" [(ngModel)] = "employeeService.bookFlight.SeatNO2" placeholder="Seat Number2">
+                        </div>
+                        <div class="row">
+                                <input type="text" class="form-control" name="flightId" id="flightId"  #flightId = "ngModel" [(ngModel)] = "employeeService.bookFlight.FlightID" placeholder="Flight ID">
+                                <input type="text" class="form-control" name="total" id="total"  #total = "ngModel" [(ngModel)] = "employeeService.bookFlight.Total" placeholder="Total Price">
+                        </div>
+                    </div>
+               </div>
+        </div>
+    

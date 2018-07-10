@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApiDBModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FlightDetailsDB1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deptTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="arrTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="airline" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stops" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pricePerPerson" Type="Double" />
+    <Property Name="totTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="totPrice" Type="Double" />
+    <Property Name="flightID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="WebApiDBEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FlightDetailsDB1" EntityType="Self.FlightDetailsDB1" />
+  </EntityContainer>
+</Schema>

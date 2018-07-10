@@ -1,0 +1,54 @@
+<form >
+    <div class="wrapper">
+
+        <nav id="sidebar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header text-align: center">
+                <h3>Search Details</h3>   
+            </div>
+      
+            <!-- Sidebar Links -->
+            <ul class="list-unstyled components" style="background-color: #0e99f7;" >
+                <div style="text-align: center">
+                  <h3>Pick-Up</h3>
+                  <h6>Place: {{pickL}}</h6>
+                  <h6>Date: {{pickD}}</h6>
+                  <h6> Time: {{pickT}}</h6>
+                  <br>
+                  <h3>Pick-Off</h3>
+                  <h6>Place: {{dropL}}</h6>
+                  <h6>Date: {{dropD}}</h6>
+                  <h6> Time: {{dropT}}</h6>
+                </div>
+              </ul>
+        </nav>
+
+
+
+    <table class="table table-hover" id="table">
+            <tbody>
+              <tr *ngFor="let emp of employeeService.showCarSearched " >
+                  <td>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>{{emp.carName}}</h1>
+                        <p>{{emp.category}}</p>
+                        <img src="assets\images\cars\{{emp.picName}}" style="width: 200px">
+                     </div>   
+                     <div class=""> 
+                        <p>Passengers: {{emp.passengers}} | Doors: {{emp.doors}} | Luggage: {{emp.luggage}}</p>
+                        <p >{{emp.spec}} </p>
+                        <p class="text-success">{{emp.included}}</p>
+                        <img src="assets\images\carSupplier\{{emp.supplier}}" style="width: 100px">
+                        <h4>Price per Day:R {{emp.price}}</h4>
+                        <br>
+                        <button  class="btn btn-lg btn-block btn-info" id="ck" (click)="show(emp)" >Select</button>
+                    </div>  
+                </div>
+                </td>
+               
+              </tr>
+            </tbody>
+    </table>
+ </div>
+</form>

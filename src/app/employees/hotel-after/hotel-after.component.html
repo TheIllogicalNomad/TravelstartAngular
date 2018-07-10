@@ -1,0 +1,131 @@
+
+
+<div class="col-md-7 col-sm-4 col-xs-12">
+  
+  <form #HotelForm= "ngForm" (ngSubmit) = "onSubmit(HotelForm)" >
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>{{name}}</h3>
+        </div>
+          <div class="panel-body">
+              <div class="container-fluid" style="background-color: green">
+                  <p class="text-white">Don’t worry Book now but make changes later if something comes up.</p>
+              </div>
+            
+              <div class="text-left">
+                <h4><span class="glyphicon glyphicon-bed"></span>Step 1: Room details</h4>
+                <h5><b>{{roomType}}</b></h5>
+                <h5>{{included}}</h5>
+                <br>
+
+                <label for="">Title</label>
+                <div>
+                    <input type="text"name="title" id="title" #title = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.Title">
+                </div>
+
+                <label for="">First name</label>
+                <p>Please give us the name of one of the people staying in this room.</p>
+                <div>
+                    <input type="text" name="firstname" id="firstname" #firstname = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.FirstName">
+                </div>
+
+                <label for="">Surname</label>
+                <div>
+                  <input type="text" name="surname" id="" #surname = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.Surname">
+                </div>
+                <br>
+                <br>
+                <h4><span class="glyphicon glyphicon-user"></span>Step 2: Your details</h4>
+                <label for="">Email Address</label>
+                <p>Your confirmation email goes here.</p>
+                <div>
+                    <input type="text" name="EmailAddress" id="EmailAddress" #surname = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.EmailAddress">
+                </div>
+
+                <label for="">Mobile number</label>
+                <p>We’ll only contact you in an emergency</p>
+                <div>
+                  <input type="text"  name="MobileNO" id="MobileNO" #MobileNO = "ngModel" [(ngModel)] = "employeeService.selectedEmployee.MobileNO">
+                </div>
+              </div>
+              <br>
+              <h4><span class="glyphicon glyphicon-lock"></span>Step 3: Payment details</h4>
+              <div class="container-fluid bg-light">
+                    <label for="">First name</label>
+                    <div>
+                        <input type="text" name="" id="">
+                    </div>
+  
+                    <label for="">Surname</label>
+                    <div>
+                      <input type="text" name="" id="">
+                    </div>
+
+                    <label for="">Card Type</label>
+                    <div>
+                        <input type="text" name="" id="" placeholder="Visa or Master Card">
+                    </div>
+
+                    <label for="">Card number</label>
+                    <div>
+                      <input type="text" name="" id="">
+                    </div>
+
+                    <label for="">Security Code</label>
+                    <div>
+                      <input type="text" name="" id="code">
+                    </div>
+                    <br>
+            </div>
+
+            <button type="submit" class="btn btn-md btn-block btn-info"> Book</button>
+
+          </div>
+      </div>
+  </form>
+</div>
+
+
+<div class="col-md-4 ">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>{{picName}}</h4>
+              <img src="assets\images\hotels\{{pic}}" style="width: 100px">
+              <hr>
+              <p>Check In: {{checkIn}}</p>
+              <p>Check Out: {{checkOut}}</p>
+              <p> {{nyt}} Nights,{{rums}} rooms</p>
+            </div>
+            <div class="col-md-6">
+            <h4><b>{{name}}</b></h4>
+            <p>{{address}}</p>
+            <br>
+            <p>Total Price</p>
+            <h1>ZAR {{calc}}</h1>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="col-md-4 ">
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <table class="table table-hover" id="table">
+                  <tbody>
+                      <tr *ngFor="let emp of employeeService.showHotelPics " >
+                          <td>
+                              <div class="row">
+                                  <div class="col-md-4">
+                                      <img src="assets\images\hotels\pics\{{emp.picName}}" style="width: 200px">
+                                   </div> 
+                              </div>
+                        </td>
+                      </tr>
+                  </tbody>
+          </table>        
+      </div>
+    </div>
+</div>

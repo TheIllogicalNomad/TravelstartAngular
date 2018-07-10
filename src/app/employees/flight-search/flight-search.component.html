@@ -1,0 +1,89 @@
+<form #contiSearchForm = "ngForm" (ngSubmit) = "continue()">
+<div class="wrapper">
+
+  <nav id="sidebar">
+      <!-- Sidebar Header -->
+      <div class="sidebar-header text-align: center">
+          <h3>Flight Details</h3>   
+      </div>
+
+      <!-- Sidebar Links -->
+      <ul class="list-unstyled components" style="background-color: #0e99f7;" >
+          <div style="text-align: center">
+            <h5>Total price</h5>
+            <label for="price" id="tPrice">R {{calc}}</label>
+            <h6>for  {{travellers}} Travellers</h6>
+            <br>
+            <button type="submit" class="btn btn-lg btn-block btn-info" > Continue</button>
+
+          </div>
+        </ul>
+        
+        <ul class="list-unstyled components" style="background-color: #0e99f7;" >
+          <div style="text-align: center">
+            <h6>{{dept}} to {{arr}},{{totTime}}</h6>
+            <h6>{{DairLine}} {{dFlid}}, {{cab}}</h6>
+          </div>
+        </ul>
+      
+        <button type="submit" class="btn btn-md btn-block btn-info"> Continue</button>
+  </nav>
+  
+       
+        <div class="col-md-8">
+            <table class="table table-hover" id="table">
+                <thead>
+                    <tr>
+                      <th scope="col">Dept.City</th>
+                      <th scope="col">Dept.Time</th>
+                      <th scope="col">Dept.Date</th>
+                      <th scope="col">Arr. City</th>
+                      <th scope="col">Arr. Time</th>
+           
+                      <th scope="col">Cabin</th>
+                      <th scope="col">Travel Time</th>
+                      <th scope="col">Stops</th>
+                      <th scope="col">Airline</th>
+                      <th scope="col">Price</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+                      <tr *ngFor="let emp of employeeService.showDeptFlight " >
+                        <td><h6>{{emp.DeptCity}}</h6></td>
+                        <td><h6>{{emp.DeptTime}}</h6></td>
+                        <td><h6>{{emp.DeptDate}}</h6></td>
+                        <td><h6>{{emp.ArrCity}}</h6></td>
+                        <td><h6>{{emp.ArrTime}}</h6></td>
+              
+                        <td><h6>{{emp.Cabin}}</h6></td>
+                        <td><h6>{{emp.TotTime}}</h6></td>
+                        <td><h6>{{emp.Stops}}</h6></td>
+                        <td><h6>{{emp.Airline}}
+                          <img src="assets\images\{{emp.AirlinePicName}}" style="width: 30px">
+                        </h6></td>
+                        <td><h6>R{{emp.Price}}</h6></td>
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="ck" (click)="show(emp)">
+                        </div>                       
+                      </tr>
+                    </tbody>
+            </table>
+
+          </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 

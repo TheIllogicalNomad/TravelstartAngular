@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApiDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SearchPlaces">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deptCity" Type="varchar" MaxLength="50" />
+    <Property Name="arrCity" Type="varchar" MaxLength="50" />
+    <Property Name="cDeptCity" Type="varchar" MaxLength="50" />
+    <Property Name="cArrCity" Type="varchar" MaxLength="50" />
+    <Property Name="hDeptCity" Type="varchar" MaxLength="50" />
+    <Property Name="hArrCity" Type="varchar" MaxLength="50" />
+    <Property Name="userID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="WebApiDBModel1StoreContainer">
+    <EntitySet Name="SearchPlaces" EntityType="Self.SearchPlaces" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

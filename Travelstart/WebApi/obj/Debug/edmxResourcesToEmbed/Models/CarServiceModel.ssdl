@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TravelStartModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarServices">
+    <Key>
+      <PropertyRef Name="CserviceID" />
+    </Key>
+    <Property Name="CserviceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pickCity" Type="varchar" MaxLength="50" />
+    <Property Name="dropCity" Type="varchar" MaxLength="50" />
+    <Property Name="carID" Type="int" />
+    <Property Name="userID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="TravelStartModel2StoreContainer">
+    <EntitySet Name="CarServices" EntityType="Self.CarServices" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

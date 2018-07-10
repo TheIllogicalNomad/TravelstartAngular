@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApiDBModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="departureFlight">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deptCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="deptDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="deptTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adults" Type="Int32" />
+    <Property Name="children" Type="Int32" />
+    <Property Name="infants" Type="Int32" />
+    <Property Name="cabin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="airline" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stops" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pricePerPerson" Type="Double" />
+    <Property Name="totPrice" Type="Double" />
+    <Property Name="totTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="flightID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="airportName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="arrCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="arrDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="arrTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="travellers" Type="Int32" />
+    <Property Name="userID" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="DepartureFlightsEntities10" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="departureFlights" EntityType="Self.departureFlight" />
+  </EntityContainer>
+</Schema>

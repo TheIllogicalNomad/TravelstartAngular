@@ -1,0 +1,94 @@
+<div class="row">
+<div class="col-md-7 ">
+    <div class="panel panel-default" style="background-color: grey;">
+            <br>
+            <br>
+        <div class="panel-body">
+            <form #HotelsearchForm = "ngForm" (ngSubmit) = "SearchHotel()">
+                    <h3> <span class="glyphicon glyphicon-search"></span> Hotel Search</h3>
+                    <div class="input-group">
+                            <select class="form-control form-control-lg" name="des" id="des">
+                                <option value="">Choose Destination </option>
+                                <option *ngFor ="let hotel of employeeService.showHotels">{{hotel.Destination}}</option>
+                            </select>
+                            <span class="input-group-btn">
+                                <button  type="submit" class="btn btn-info">Go</button>
+                            </span>
+                    </div>
+                    <br>
+                    <div class="">
+                            <div class="col-md-4">
+                                <label for="">Check In</label>
+                                <input class="form-control" id="dp" name = "d1"  [(ngModel)] = "d1" type="date" style="background-color: #def2f6;">
+                            </div>
+                            
+                            <div class="col-md-4">
+                               <label for="">Check Out</label>
+                               <input class="form-control" id="df" name = "d2"  [(ngModel)] = "d2" type="date" style="background-color: #def2f6;">
+                            </div>
+        
+                            <div class="col-md-2">
+                                <label for="">Nights</label>
+                                <input class="form-control" id="ni" name = "ni" style="background-color: #def2f6;">
+                            </div>
+        
+                            <div class="col-md-2">
+                                <label for="">Rooms</label>
+                                <input class="form-control" id="room" name = "" style="background-color: #def2f6;">
+                            </div>                           
+                    </div>  
+            </form>  
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 ">
+        <div class="panel panel-default" style="background-color: grey;">
+            <div class="panel-heading">
+                <h4 class="panel-title"><img src="assets\images\hotels\house.jpg" class="img-responsive"></h4>     
+            </div>
+        </div>
+</div>
+
+</div>
+
+<div class="container-fluid">
+    <h3>Popular Destination</h3>
+    <br>
+    <div class="container-fluid" style="background-color: grey;">
+        <br>
+        <div class="col-md-6">
+            <img src="assets\images\hotels\cape.jpg" class="img-responsive" style="width:100%;">
+            <div class="top-left"><h3><b>Cape Town</b></h3></div>
+        </div>
+        <div class="col-md-6">
+            <img src="assets\images\hotels\durb.jpg" class="img-responsive" style="width:100%;">
+            <div class="top-left"><h3><b>Durban</b></h3></div>
+        </div>
+       
+    </div>
+    <div  class="container-fluid" style="background-color: grey;">
+        <br>
+        <br>
+        <div class="col-md-8 ml-md-2">
+            <img src="assets\images\hotels\Jozi.jpg" class="img-responsive" style="width:100%;">
+            <div class="top-left"><h3><b>Joburg</b></h3></div>
+        </div>
+        <div class="col-md-3 ml-md-4">
+            <img src="assets\images\hotels\sandton.jpg" class="img-responsive" style="width:100%;">
+            <div class="top-left"><h3><b>Sandton</b></h3></div>
+        </div>
+        <div class="col-md-3 ml-md-4">
+            <img src="assets\images\hotels\pre.jpg" class="img-responsive" style="width:100%;">
+            <div class="top-left"><h3><b>Pretoria</b></h3></div>
+        </div>
+        <div class="col-md-3 ml-md-4">
+                <img src="assets\images\hotels\east.jpg" class="img-responsive" style="width:100%;">
+                <div class="top-left"><h3><b>Eastern Cape</b></h3></div>
+            </div>
+    </div>
+</div>

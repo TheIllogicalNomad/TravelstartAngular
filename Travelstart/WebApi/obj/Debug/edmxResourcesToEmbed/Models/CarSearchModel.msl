@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApiDBModel3StoreContainer" CdmEntityContainer="CarSearchEntity">
+    <EntitySetMapping Name="CarSearches">
+      <EntityTypeMapping TypeName="WebApiDBModel3.CarSearch">
+        <MappingFragment StoreEntitySet="CarSearch">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pickUpL" ColumnName="pickUpL" />
+          <ScalarProperty Name="dropOffL" ColumnName="dropOffL" />
+          <ScalarProperty Name="pickUpD" ColumnName="pickUpD" />
+          <ScalarProperty Name="dropOffD" ColumnName="dropOffD" />
+          <ScalarProperty Name="pickUpT" ColumnName="pickUpT" />
+          <ScalarProperty Name="dropOffT" ColumnName="dropOffT" />
+          <ScalarProperty Name="airportName" ColumnName="airportName" />
+          <ScalarProperty Name="picName" ColumnName="picName" />
+          <ScalarProperty Name="carName" ColumnName="carName" />
+          <ScalarProperty Name="noPassengers" ColumnName="noPassengers" />
+          <ScalarProperty Name="luggage" ColumnName="luggage" />
+          <ScalarProperty Name="noDoors" ColumnName="noDoors" />
+          <ScalarProperty Name="spec" ColumnName="spec" />
+          <ScalarProperty Name="included" ColumnName="included" />
+          <ScalarProperty Name="priceDay" ColumnName="priceDay" />
+          <ScalarProperty Name="totPrice" ColumnName="totPrice" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="daysRent" ColumnName="daysRent" />
+          <ScalarProperty Name="carID" ColumnName="carID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

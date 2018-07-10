@@ -1,0 +1,50 @@
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="navbar-header">
+        <h3 class="text-primary">Print Ticket(s)</h3>	
+      </div>
+      <br>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <button type="submit" class="btn btn-link" (click)="pdf()" style="float: right">Print Ticket(s)</button>
+
+  <table class="table table-hover" id="table">
+      <tbody>
+        <tr *ngFor="let emp of employeeService.nameID" >
+            <td>
+                <li *ngFor="let book of employeeService.bookID">
+                    <div  id="content" #content>
+                        <h4><strong> Boarding Pass</strong></h4>
+                        <p><strong>PASSENGER NAME</strong></p>
+                        <p>{{emp.FirstName}} {{emp.Surname}}</p>
+                        <br>
+                        <p><strong>FROM:</strong></p>
+                        <p>{{book.DeptCity}}</p>
+                        <p><strong>TO:</strong></p>
+                        <p>{{book.ArrCity}}</p>
+                        <br>
+                        <p>FLIGHT</p>
+                        <p class="text-primary"><strong>{{book.FlightID}}</strong></p>
+                        <p>DATE</p>
+                        <p class="text-primary"><strong>{{book.DeptDate}}</strong></p>
+                        <p>Departure Time TIME</p>
+                        <p class="text-primary"><strong>{{book.DeptTime}}</strong></p>
+                        <P>SEAT NO:</P>
+                        <p class="text-primary"><strong>{{emp.seatNO}}</strong></p>
+                        <p class="text-danger">GATE CLOSES 40 MINUTES BOFORE DEPARTURE</p>
+                        <h2 class="text-primary"> HAVE A NICE TRIP</h2>
+                    </div>
+                </li>
+            </td>
+        </tr>
+      </tbody>
+  </table>

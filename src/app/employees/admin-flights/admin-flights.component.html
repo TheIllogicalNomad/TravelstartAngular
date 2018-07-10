@@ -1,0 +1,156 @@
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+<div style="text-align: center">
+		<h2 class="jumbotron bg-secondary text-white">Manage Flight Details</h2>
+		<ul class="text-center">
+				<li><a a routerLink="/home" target="_blank">Visit Site</a></li>
+		</ul>
+</div>
+<br>
+
+<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="container-fluid">
+				  
+					<table class="table table-hover" id="table">
+                <thead>
+                    <tr>
+                      <th scope="col">Dept.City</th>
+                      <th scope="col">Dept.Time</th>
+                      <th scope="col">Dept.Date</th>
+                      <th scope="col">Arr. City</th>
+                      <th scope="col">Arr. Time</th>
+                      <th scope="col">Cabin</th>
+                      <th scope="col">Travel Time</th>
+                      <th scope="col">Stops</th>
+                      <th scope="col">Airline</th>
+                      <th scope="col">Price</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+                      <tr *ngFor="let emp of employeeService.ViewFlight" >                
+						<td><h6>{{emp.DeptCity}}</h6></td>
+                        <td><h6>{{emp.DeptTime}}</h6></td>
+                        <td><h6>{{emp.DeptDate}}</h6></td>
+                        <td><h6>{{emp.ArrCity}}</h6></td>
+                        <td><h6>{{emp.ArrTime}}</h6></td>
+              
+                        <td><h6>{{emp.Cabin}}</h6></td>
+                        <td><h6>{{emp.TotTime}}</h6></td>
+                        <td><h6>{{emp.Stops}}</h6></td>
+                        <td><h6>{{emp.Airline}}
+                          <img src="assets\images\{{emp.AirlinePicName}}" style="width: 30px">
+                        </h6></td>
+                        <td><h6>R{{emp.Price}}</h6></td>
+						<button  class="btn btn-primary" style="float: center" (click)="edit(emp)"><span class="glyphicon glyphicon-edit"></span></button>
+				    	<button  class="btn btn-primary" style="float: center" (click)="delete(emp)"><span class="glyphicon glyphicon-trash"></span></button>
+                       
+                      </tr>
+                    </tbody>
+            </table>
+			</div>
+		</div>
+</div>
+
+
+<form #FlightsAdmin = "ngForm" (ngSubmit) = "onSubmit(FlightsAdmin)">
+		<div class="col-md-6">
+				<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="container-fluid">
+
+									<label for="deptCity">Departure City</label>
+									<div>
+											<input type="text" name="deptCity" id="deptCity" #deptCity = "ngModel" [(ngModel)] = "employeeService.addFlight.DeptCity" >					  
+									</div>
+
+									<label for="pwd">Arrival City</label>
+									<div>
+											<input type="text" name="arrCity" id="arrCity" #arrCity = "ngModel" [(ngModel)] = "employeeService.addFlight.ArrCity">					  
+									</div>
+
+									<label for="pwd">Departure Date</label>
+									<div>
+											<input type="text" name="deptDate" id="deptDate" #deptDate = "ngModel" [(ngModel)] = "employeeService.addFlight.DeptDate">					  
+									</div>
+
+									<label for="pwd">Departure Time</label>
+									<div>
+											<input type="text" name="deptTime" id="deptTime" #deptTime = "ngModel" [(ngModel)] = "employeeService.addFlight.DeptTime">					  
+									</div>
+
+									<label for="pwd">Arrival Time</label>
+									<div>
+											<input type="text" name="arrTime" id="arrTime" #arrTime = "ngModel" [(ngModel)] = "employeeService.addFlight.ArrTime">					  
+									</div>
+
+									<label for="pwd">Airline</label>
+									<div>
+											<input type="text" name="airline" id="airline" #airline = "ngModel" [(ngModel)] = "employeeService.addFlight.Airline">					  
+									</div>
+
+									<label for="pwd">Airport Name</label>
+									<div>
+											<input type="text" name="airportName" id="airportName" #airportName = "ngModel" [(ngModel)] = "employeeService.addFlight.AirportName">					  
+									</div>
+								</div>
+							</div>
+				</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="container-fluid">
+
+								<label for="pwd">Price</label>
+								<div>
+										<input type="text" name="price" id="price" #price = "ngModel" [(ngModel)] = "employeeService.addFlight.Price">
+										  
+								</div>
+
+								<label for="pwd">Cabin</label>
+								<div>
+										<input type="text" name="cabin" id="cabin" #cabin = "ngModel" [(ngModel)] = "employeeService.addFlight.Cabin">
+										  
+								</div>
+
+								<label for="pwd">Stops</label>
+								<div>
+										<input type="text" name="stops" id="stops" #stops = "ngModel" [(ngModel)] = "employeeService.addFlight.Stops">
+										  
+								</div>
+
+								<label for="pwd">Flight ID</label>
+								<div>
+										<input type="text" name="flightID" id="flightID" #flightID = "ngModel" [(ngModel)] = "employeeService.addFlight.FlightID">
+										  
+								</div>
+
+								<label for="pwd">Picture Name</label>
+								<div>
+									<input type="text" name="airlinePicName" id="airlinePicName" #airlinePicName = "ngModel" [(ngModel)] = "employeeService.addFlight.AirlinePicName">
+										  
+								</div>
+
+								<label for="pwd">Total Travel Time</label>
+								<div>
+										<input type="text" name="totTime" id="totTime" #totTime = "ngModel" [(ngModel)] = "employeeService.addFlight.TotTime">
+									  
+								</div>
+							</div>
+							<div class="float-right">
+									<button type="submit" class="btn btn-secondary btn-lg"><span class="glyphicon glyphicon-save"></span>Save</button>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+</form>

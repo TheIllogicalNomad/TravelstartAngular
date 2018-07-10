@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TravelStartModel4" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CarDetail">
+    <Key>
+      <PropertyRef Name="carID" />
+    </Key>
+    <Property Name="carID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pickL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pickD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pickT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dropL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dropD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dropT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="airportName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="carName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="picName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passengers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="luggage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="spec" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="included" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="supplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="daysRent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="CarDetailsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CarDetails" EntityType="Self.CarDetail" />
+  </EntityContainer>
+</Schema>

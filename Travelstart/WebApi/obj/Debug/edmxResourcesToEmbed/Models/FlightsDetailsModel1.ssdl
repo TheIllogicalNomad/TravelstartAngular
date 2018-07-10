@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApiDBModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FlightDetailsDB1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deptTime" Type="varchar" MaxLength="50" />
+    <Property Name="arrTime" Type="varchar" MaxLength="50" />
+    <Property Name="airline" Type="varchar" MaxLength="50" />
+    <Property Name="stops" Type="varchar" MaxLength="50" />
+    <Property Name="pricePerPerson" Type="float" />
+    <Property Name="totTime" Type="varchar" MaxLength="50" />
+    <Property Name="totPrice" Type="float" />
+    <Property Name="flightID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="WebApiDBModel2StoreContainer">
+    <EntitySet Name="FlightDetailsDB1" EntityType="Self.FlightDetailsDB1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

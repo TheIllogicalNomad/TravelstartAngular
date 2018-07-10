@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApiDBModel2StoreContainer" CdmEntityContainer="DepartureFlightsEntities10">
+    <EntitySetMapping Name="departureFlights">
+      <EntityTypeMapping TypeName="WebApiDBModel2.departureFlight">
+        <MappingFragment StoreEntitySet="departureFlights">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="deptCity" ColumnName="deptCity" />
+          <ScalarProperty Name="deptDate" ColumnName="deptDate" />
+          <ScalarProperty Name="deptTime" ColumnName="deptTime" />
+          <ScalarProperty Name="adults" ColumnName="adults" />
+          <ScalarProperty Name="children" ColumnName="children" />
+          <ScalarProperty Name="infants" ColumnName="infants" />
+          <ScalarProperty Name="cabin" ColumnName="cabin" />
+          <ScalarProperty Name="airline" ColumnName="airline" />
+          <ScalarProperty Name="stops" ColumnName="stops" />
+          <ScalarProperty Name="pricePerPerson" ColumnName="pricePerPerson" />
+          <ScalarProperty Name="totPrice" ColumnName="totPrice" />
+          <ScalarProperty Name="totTime" ColumnName="totTime" />
+          <ScalarProperty Name="flightID" ColumnName="flightID" />
+          <ScalarProperty Name="airportName" ColumnName="airportName" />
+          <ScalarProperty Name="arrCity" ColumnName="arrCity" />
+          <ScalarProperty Name="arrDate" ColumnName="arrDate" />
+          <ScalarProperty Name="arrTime" ColumnName="arrTime" />
+          <ScalarProperty Name="travellers" ColumnName="travellers" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

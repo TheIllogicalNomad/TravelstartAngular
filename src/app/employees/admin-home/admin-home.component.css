@@ -1,0 +1,20 @@
+#img_cont {
+    display: table;
+    width: 200%;
+    margin: 100px auto;
+  }
+  
+  #img_cont a {
+    display: table-cell;
+    text-align: center;
+    width: 16%;
+  }
+  
+  #img_cont img {
+    width: 200%;
+    max-width: 250px;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }

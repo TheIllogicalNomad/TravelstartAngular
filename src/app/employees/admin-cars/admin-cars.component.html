@@ -1,0 +1,142 @@
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+<div style="text-align: center">
+		<h2 class="jumbotron bg-secondary text-white">Add Car Details</h2>
+		<ul class="text-center">
+			<li><a href="" a routerLink="/home" >Visit Site</a></li>
+		</ul>
+</div>
+<br>
+
+<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="container-fluid">
+				<img src="assets\images\car.jpg" style="width: 100%">
+			</div>
+		</div>
+</div>
+
+
+<form #CarAdmin = "ngForm" (ngSubmit) = "onSubmit(CarAdmin)">
+		<div class="col-md-6">
+				<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="container-fluid">
+									
+									<label for="pwd">Pick Up Location</label>
+									<div>
+										<input type="text" name="pickL" id="pickL" #pickL = "ngModel" [(ngModel)] = "employeeService.addCar.pickL" >					  
+									</div>
+									<label for="email">Drop Off Location</label>
+									<div>
+											<input type="text" name="dropL" id="dropL" #destination = "ngModel" [(ngModel)] = "employeeService.addCar.dropL" >					  
+									</div>
+
+									<label for="pwd">Pick Up Date</label>
+									<div>
+											<input type="text" name="pickD" id="pickD" #pickD = "ngModel" [(ngModel)] = "employeeService.addCar.pickD">					  
+									</div>
+
+									<label for="pwd">Drop Off Date</label>
+									<div>
+											<input type="text" name="dropD" id="dropD" #dropD = "ngModel" [(ngModel)] = "employeeService.addCar.dropD">					  
+									</div>
+
+									<label for="pwd">Pick Up Time</label>
+									<div>
+											<input type="text" name="pickT" id="pickT" #pickT = "ngModel" [(ngModel)] = "employeeService.addCar.pickT">					  
+									</div>
+
+									<label for="pwd">Drop Off Time</label>
+									<div>
+											<input type="text" name="dropT" id="dropT" #dropT = "ngModel" [(ngModel)] = "employeeService.addCar.dropT">					  
+									</div>
+
+									<label for="pwd">Picture Name</label>
+									<div>
+											<input type="text" name="picName" id="picName" #picName = "ngModel" [(ngModel)] = "employeeService.addCar.picName">					  
+									</div>
+									<label for="pwd">Car Name</label>
+									<div>
+											<input type="text" name="carName" id="carName" #carName = "ngModel" [(ngModel)] = "employeeService.addCar.carName">							
+									</div>
+	
+									<label for="pwd">Passengers</label>
+									<div>
+											<input type="text" name="passengers" id="passengers" #passengers = "ngModel" [(ngModel)] = "employeeService.addCar.passengers">								
+									</div>
+
+								</div>
+							</div>
+				</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="container-fluid">
+
+							
+								<label for="pwd">Airport Name</label>
+								<div>
+										<input type="text" name="airportName" id="airportName" #airportName = "ngModel" [(ngModel)] = "employeeService.addCar.airportName">
+										
+								</div>
+
+								<label for="pwd">Luggage</label>
+								<div>
+										<input type="text" name="luggage" id="luggage" #luggage = "ngModel" [(ngModel)] = "employeeService.addCar.luggage">
+										
+								</div>
+								
+
+								<label for="pwd">Doors</label>
+								<div>
+										<input type="text" name="doors" id="doors" #doors = "ngModel" [(ngModel)] = "employeeService.addCar.doors">
+										
+								</div>
+
+								<label for="pwd">Price</label>
+								<div>
+										<input type="text" name="price" id="price" #price = "ngModel" [(ngModel)] = "employeeService.addCar.price">					  
+								</div>
+
+								<label for="pwd">Included</label>
+								<div>
+										<input type="text" name="included" id="included" #included = "ngModel" [(ngModel)] = "employeeService.addCar.included">
+										
+								</div>
+
+								<label for="pwd">Specifications</label>
+								<div>
+										<input type="text" name="spec" id="spec" #spec = "ngModel" [(ngModel)] = "employeeService.addCar.spec">
+										
+								</div>
+
+								<label for="pwd">Category</label>
+								<div>
+										<input type="text" name="category" id="category" #category = "ngModel" [(ngModel)] = "employeeService.addCar.category">
+										
+								</div>
+
+								<label for="pwd">Supplier</label>
+								<div>
+										<input type="text" name="supplier" id="supplier" #supplier = "ngModel" [(ngModel)] = "employeeService.addCar.supplier">
+										
+								</div>
+
+							</div>
+							<div class="float-right">
+									<button type="submit" class="btn btn-secondary btn-lg"><span class="glyphicon glyphicon-save"></span>Save</button>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+</form>

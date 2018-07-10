@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelStartModel4StoreContainer" CdmEntityContainer="CarDetailsEntities">
+    <EntitySetMapping Name="CarDetails">
+      <EntityTypeMapping TypeName="TravelStartModel4.CarDetail">
+        <MappingFragment StoreEntitySet="CarDetails">
+          <ScalarProperty Name="carID" ColumnName="carID" />
+          <ScalarProperty Name="pickL" ColumnName="pickL" />
+          <ScalarProperty Name="pickD" ColumnName="pickD" />
+          <ScalarProperty Name="pickT" ColumnName="pickT" />
+          <ScalarProperty Name="dropL" ColumnName="dropL" />
+          <ScalarProperty Name="dropD" ColumnName="dropD" />
+          <ScalarProperty Name="dropT" ColumnName="dropT" />
+          <ScalarProperty Name="airportName" ColumnName="airportName" />
+          <ScalarProperty Name="carName" ColumnName="carName" />
+          <ScalarProperty Name="picName" ColumnName="picName" />
+          <ScalarProperty Name="passengers" ColumnName="passengers" />
+          <ScalarProperty Name="luggage" ColumnName="luggage" />
+          <ScalarProperty Name="doors" ColumnName="doors" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="spec" ColumnName="spec" />
+          <ScalarProperty Name="included" ColumnName="included" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="daysRent" ColumnName="daysRent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

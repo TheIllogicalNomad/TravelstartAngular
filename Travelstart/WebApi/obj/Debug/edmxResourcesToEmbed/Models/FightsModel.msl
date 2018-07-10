@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApiDBModel1StoreContainer" CdmEntityContainer="WebApiDBEntities1">
+    <EntitySetMapping Name="fightsDBs">
+      <EntityTypeMapping TypeName="WebApiDBModel1.fightsDB">
+        <MappingFragment StoreEntitySet="fightsDB">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="deptCity" ColumnName="deptCity" />
+          <ScalarProperty Name="arrCity" ColumnName="arrCity" />
+          <ScalarProperty Name="deptDate" ColumnName="deptDate" />
+          <ScalarProperty Name="arrDate" ColumnName="arrDate" />
+          <ScalarProperty Name="adults" ColumnName="adults" />
+          <ScalarProperty Name="children" ColumnName="children" />
+          <ScalarProperty Name="infants" ColumnName="infants" />
+          <ScalarProperty Name="economyCabin" ColumnName="economyCabin" />
+          <ScalarProperty Name="premiumCabin" ColumnName="premiumCabin" />
+          <ScalarProperty Name="firstCabin" ColumnName="firstCabin" />
+          <ScalarProperty Name="businessCabin" ColumnName="businessCabin" />
+          <ScalarProperty Name="userDetails" ColumnName="userDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

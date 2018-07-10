@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApiDBModel3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarSearch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pickUpL" Type="varchar" MaxLength="50" />
+    <Property Name="dropOffL" Type="varchar" MaxLength="50" />
+    <Property Name="pickUpD" Type="varchar" MaxLength="50" />
+    <Property Name="dropOffD" Type="varchar" MaxLength="50" />
+    <Property Name="pickUpT" Type="varchar" MaxLength="50" />
+    <Property Name="dropOffT" Type="varchar" MaxLength="50" />
+    <Property Name="airportName" Type="varchar" MaxLength="50" />
+    <Property Name="picName" Type="varchar" MaxLength="50" />
+    <Property Name="carName" Type="varchar" MaxLength="50" />
+    <Property Name="noPassengers" Type="varchar" MaxLength="50" />
+    <Property Name="luggage" Type="varchar" MaxLength="50" />
+    <Property Name="noDoors" Type="varchar" MaxLength="50" />
+    <Property Name="spec" Type="varchar" MaxLength="50" />
+    <Property Name="included" Type="varchar" MaxLength="50" />
+    <Property Name="priceDay" Type="varchar" MaxLength="50" />
+    <Property Name="totPrice" Type="varchar" MaxLength="50" />
+    <Property Name="category" Type="varchar" MaxLength="50" />
+    <Property Name="supplier" Type="varchar" MaxLength="50" />
+    <Property Name="daysRent" Type="varchar" MaxLength="50" />
+    <Property Name="carID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="WebApiDBModel3StoreContainer">
+    <EntitySet Name="CarSearch" EntityType="Self.CarSearch" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

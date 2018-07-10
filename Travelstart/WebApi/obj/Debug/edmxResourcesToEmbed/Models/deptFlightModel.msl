@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApiDBModel4StoreContainer" CdmEntityContainer="WebApiDBEntities8">
+    <EntitySetMapping Name="deptFlights">
+      <EntityTypeMapping TypeName="WebApiDBModel4.deptFlight">
+        <MappingFragment StoreEntitySet="deptFlight">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="deptCity" ColumnName="deptCity" />
+          <ScalarProperty Name="arrCity" ColumnName="arrCity" />
+          <ScalarProperty Name="deptTime" ColumnName="deptTime" />
+          <ScalarProperty Name="arrTime" ColumnName="arrTime" />
+          <ScalarProperty Name="adults" ColumnName="adults" />
+          <ScalarProperty Name="children" ColumnName="children" />
+          <ScalarProperty Name="infants" ColumnName="infants" />
+          <ScalarProperty Name="cabin" ColumnName="cabin" />
+          <ScalarProperty Name="userDetails" ColumnName="userDetails" />
+          <ScalarProperty Name="airline" ColumnName="airline" />
+          <ScalarProperty Name="stops" ColumnName="stops" />
+          <ScalarProperty Name="pricePersonPerson" ColumnName="pricePersonPerson" />
+          <ScalarProperty Name="totTime" ColumnName="totTime" />
+          <ScalarProperty Name="totPrice" ColumnName="totPrice" />
+          <ScalarProperty Name="flightID" ColumnName="flightID" />
+          <ScalarProperty Name="airportName" ColumnName="airportName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

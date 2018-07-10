@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TravelStartModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarDetails">
+    <Key>
+      <PropertyRef Name="carID" />
+    </Key>
+    <Property Name="carID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pickL" Type="varchar" MaxLength="50" />
+    <Property Name="pickD" Type="varchar" MaxLength="50" />
+    <Property Name="pickT" Type="varchar" MaxLength="50" />
+    <Property Name="dropL" Type="varchar" MaxLength="50" />
+    <Property Name="dropD" Type="varchar" MaxLength="50" />
+    <Property Name="dropT" Type="varchar" MaxLength="50" />
+    <Property Name="airportName" Type="varchar" MaxLength="50" />
+    <Property Name="carName" Type="varchar" MaxLength="50" />
+    <Property Name="picName" Type="varchar" MaxLength="50" />
+    <Property Name="passengers" Type="varchar" MaxLength="50" />
+    <Property Name="luggage" Type="varchar" MaxLength="50" />
+    <Property Name="doors" Type="varchar" MaxLength="50" />
+    <Property Name="category" Type="varchar" MaxLength="50" />
+    <Property Name="spec" Type="varchar(max)" />
+    <Property Name="included" Type="varchar(max)" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+    <Property Name="supplier" Type="varchar" MaxLength="50" />
+    <Property Name="daysRent" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="TravelStartModel4StoreContainer">
+    <EntitySet Name="CarDetails" EntityType="Self.CarDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

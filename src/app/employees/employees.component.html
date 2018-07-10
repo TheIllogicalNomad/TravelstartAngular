@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light" >
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+     <a class="navbar-brand" routerLink="home"><img alt="Logo" src="assets\images\download.png" style="max-width:170px;margin-top:-7px" /></a>
+     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+       <li class="nav-item active">
+         <a class="nav-link"  routerLink="home">Flights</a>
+       </li>
+       <li class="nav-item ">
+         <a class="nav-link"  routerLink="hotels">Hotels</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" routerLink="cars">Cars</a>
+       </li>
+     </ul>
+     <div class="navbar-header navbar-right">
+      <a class="navbar-brand" href="#"> <img alt="Logo" src="assets\images\user.png" style="max-width:40px;margin-top:-2px" /> </a>
+    
+ 
+      <div class="dropdown" >
+              <div  *ngIf="!isLogin">
+                  <a class="dropdown-toggle" data-toggle="dropdown">{{trip}} </a>
+            
+                  <ul class="dropdown-menu" style="text-align: center">
+                      <li><a  routerLink="employee">Sign Up</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a routerLink="employee-list">Sign In</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a routerLink="admin">Admin</a></li>
+                  </ul>
+              </div>
+              <div *ngIf="isLogin">
+                  <a class="dropdown-toggle" data-toggle="dropdown">{{trip}} </a>
+                <div class="row">
+                  <p class="text-primary">{{name}} {{sname}}</p>
+                    <ul class="dropdown-menu" style="text-align: center" >
+                        <li><a routerLink="dashboard">Dashboard</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a routerLink="employee-list"  (click)="out()" >Sign Out</a></li>
+                    </ul>
+                  </div>
+              </div>
+              
+            
+          
+        </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+
+
+
+

@@ -1,0 +1,128 @@
+<div class="text-center">
+    <div class="container ">
+      <h2 class="text-center">Search and Book Cheap Flights</h2>
+      <br>
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-secondary">One Way</button>
+        </div>
+      <br>
+      <br><br>
+      <div class="container bg-light">
+        <br>
+      <form #searchForm ="ngForm" (ngSubmit) = "search()">
+            <div class="container-fluid">
+              <div class="">
+                  <div class="autocomplete" style="width:300px;">
+                   Departure City
+                    <select class="form-control form-control-lg" id="deptCity" name ="dCity"  style="background-color: #def2f6;">
+                      <option value="">Choose...</option>  
+                      <option *ngFor ="let employee of employeeService.showCities">{{employee.DeptCity}}</option>
+                    </select>
+                  </div>
+        
+                  <!--<input type="submit">-->
+                  <div class="autocomplete" style="width:300px;">
+                    Arrival City
+                    <select class="form-control form-control-lg" id="arrCity" name ="aCity"  style="background-color: #def2f6;">
+                      <option value="">Choose...</option> 
+                      <option *ngFor ="let employee of employeeService.showCities">{{employee.ArrCity}}</option>
+                    </select>
+                  </div>
+              </div>
+            
+            <div class="">
+                  <div class="autocomplete" style="width:300px;">
+                    Departure Date <input class="form-control" id="dd" name = "d1"  [(ngModel)] = "d1" type="date" style="background-color: #def2f6;">
+                  </div>
+                  <!--<input type="submit">-->
+                  <div class="autocomplete" style="width:300px;">
+                    Travellers<input class="form-control" id="trvls" name = "Travellers" placeholder="Travellers" [(ngModel)] = "Travellers" style="background-color: #def2f6;">
+                  </div>
+            </div>
+        
+            <div class="">
+                <div class="autocomplete" style="width:300px;">
+                  <button type="submit" class="btn btn-primary" style="float: center">Search<span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </div> 
+                
+          </div>
+        </form>
+        <br>
+      </div>
+            
+
+              <br>
+              <br>
+              <h5 id="p1"><span class="glyphicon glyphicon-plane"></span> Bringing you the best fares from all airlines <span class="glyphicon glyphicon-plane"></span> </h5>
+              <h5 id="p2"><span class=" glyphicon glyphicon-earphone"></span> Expert assistance from booking to departure <span class=" glyphicon glyphicon-earphone"></span></h5>
+              <h5 ><span class=" glyphicon glyphicon-globe"></span> Online destination for planning your travels <span class=" glyphicon glyphicon-globe"></span></h5>   
+              <br>
+              <br>
+          </div>
+         
+              <h3>Popular Destinations</h3>
+              <br>
+              <div class="container-fluid" style="background-color: #def2f6;">
+                <br>
+                <div class="row">
+                  <div class="col-sm-6 col-md-4" style="text-align: center">
+                <div class="thumbnail">
+                  <img src="assets\images\cpt.jpg" class="rounded float-left img-rounded " alt="Responsive image" width="350" height="300">
+                  <div class="caption">
+                    <h4>Cape Town</h4>
+                    <p>Perched between the ocean and the mountain, with a national park as its heart, there is nowhere like Cape Town. Cape Town, the “Mother City”, is the oldest city in South Africa and has a cultural heritage spanning more than 300 years.</p>
+                    
+                  </div>
+                </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4" style="text-align: center">
+                <div class="thumbnail">
+                  <img src="assets\images\ldn.jpg" class="rounded float-left img-rounded " alt="Responsive image" width="350" height="300">
+                  <div class="caption">
+                    <h4>London</h4>
+                    <p>London is a diverse and exciting city with some of the world's best sights and attractions. With so much to do, it's hard to narrow down the long list of reasons to visit, but below you'll find some of them.</p>
+                   <br>
+                  </div>
+                </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="text-align: center">
+                <div class="thumbnail">
+                  <img src="assets\images\par.jpg" class="rounded float-left img-rounded " alt="Responsive image" width="350" height="300">
+                  <div class="caption">
+                    <h4>Paris</h4>
+                    <p>As the capital city of France, Paris has endured as an important city for more than 2,000 years. Often called by nicknames like the “city of love” and “city of lights,” Paris is today one of the world’s leading centers for business, fashion, entertainment, art and culture. </p>
+                    
+                  </div>
+                </div>
+                </div>
+            </div>
+  
+               
+            </div>
+            <br>
+            <br>
+            <br>
+            <footer>
+              <h4>Travelstart: Cheap flights, incredible hotels and affordable car rentals</h4>
+              <p>Travelstart is Africa’s leading online travel agency. Based in sunny Cape Town, we have offices across Africa and the Middle East where hundreds of Travelstarters are dedicated to rocking your travel world. We want our customers to spend less time planning their travels and more time on holiday. Our mission is to save you time, money and stress with our simple online booking platform. You can search, compare and book your travel all in one place.</p>
+            <div class="row">
+              <div class="col-sm-6 col-md-6" style="text-align: center">
+                <h4>What does Travelstart do?</h4>
+                <p>Travelstart is your one-stop online travel shop. So, forget trawling the web for the latest flight specials. With low airfares on international and domestic flights from all your favourite airlines, vehicle hire options from top car rental companies and hotel reservations bookable for properties on every continent, we offer something for every traveller’s budget. For custom holiday packages to anywhere you can imagine, contact our travel experts and let’s start planning!</p>
+              </div>
+              <div class="col-sm-6 col-md-6" style="text-align: center">
+                  <h4>Why book with Travelstart?</h4>
+                  <p>Ain’t nobody got time for queues, spending hours hunting down deals or changing your plans to accommodate an airlines’ schedule. At Travelstart all the best travel suppliers and specials can be found, compared and booked quickly and safely, using multiple payment methods. You can mix and match departing and return cheap flights on different airlines and book flexi-tickets. Treat yourself to peace of mind and prepare your VISA application – with travel insurance too!</p>
+              </div>
+            
+            </div>  
+            </footer>
+             
+  </div>
+  
+      
+        
+  
+  
+  

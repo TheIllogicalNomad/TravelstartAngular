@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelStartModel1StoreContainer" CdmEntityContainer="FlightServiceEntities">
+    <EntitySetMapping Name="FlightServices">
+      <EntityTypeMapping TypeName="TravelStartModel1.FlightService">
+        <MappingFragment StoreEntitySet="FlightServices">
+          <ScalarProperty Name="FserviceID" ColumnName="FserviceID" />
+          <ScalarProperty Name="DeptCity" ColumnName="DeptCity" />
+          <ScalarProperty Name="ArrCity" ColumnName="ArrCity" />
+          <ScalarProperty Name="AirportName" ColumnName="AirportName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
